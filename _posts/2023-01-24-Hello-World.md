@@ -9,4 +9,4 @@ Today I have created this blog by forking the [Jekyll Now repository](https://gi
 
 I have created an account at Cloudflare and registered the domain [doiotyourself.com](https://doiotyourself.com).
 
-Let's see id thsi ssh key is working.
+Let's see if this ssh key is working. It works!
