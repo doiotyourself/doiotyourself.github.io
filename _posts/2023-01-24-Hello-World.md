@@ -84,10 +84,16 @@ Cloudflare pages is very user friendly.
 - deploy to [Cloudflare Pages](https://doiotyourself.pages.dev).
 
 
-## Step Seven - Set up custom domain to point to my site.
+## Step Seven - Set up custom domain to point to my site
 
 Final step for tonight is setup the DNS records for my new domain. This is very easy when the domain is registered with Cloudflare. There's a tab in your Pages project called 'custom domains' - click and go.
 
 Thanks for visiting [doiotyourself.com](https://doiotyourself.com).
+
+## Bonus Step - Set up email forwarding to gmail
+
+I'll add DNS configuration to forward emails sent to <josh@doiotyourself.com> to the email account that I setup in Step One. [Start here](https://dash.cloudflare.com/?to=/:account/:zone/email/overview) - it's only 3 clicks to set up.
+
+Sent a test email from another Gmail account to <josh@doiotyourself.com>. Cloudflare forwarded it but Gmail put it in spam. Need to do further testing.
 
 See you soon.

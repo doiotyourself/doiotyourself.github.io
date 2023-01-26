@@ -3,7 +3,7 @@ layout: post
 title: Will this blog make any money? 
 ---
 
-Ok, so I ask myself why did I start this blog? And will this bolg make any money?
+Ok, so I ask myself why did I start this blog? And will this blog make any money?
 
 ## My answers so far:
 

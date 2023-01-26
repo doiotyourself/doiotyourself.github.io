@@ -6,7 +6,7 @@
 name: Do IoT Yourself
 
 # Short bio or description (displayed in the header)
-description: Blog about my Internet of Things projects
+description: Blog about my Internet of Things DIY projects
 
 # URL of your avatar or profile pic (you could use your GitHub profile pic)
 avatar: https://raw.githubusercontent.com/doiotyourself/doiotyourself.github.io/master/images/jekyll-logo.png
@@ -18,10 +18,10 @@ avatar: https://raw.githubusercontent.com/doiotyourself/doiotyourself.github.io/
 # Includes an icon in the footer for each username you enter
 footer-links:
   dribbble:
-  email:
+  email: <josh@doiotyourself.com>
   facebook:
   flickr:
-  github: doiotyourself/doiotyourself.github.io
+  github: doiotyourself
   instagram:
   linkedin:
   pinterest:
