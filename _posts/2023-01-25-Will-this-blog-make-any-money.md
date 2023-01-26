@@ -8,16 +8,27 @@ Ok, so I ask myself why did I start this blog? And will this bolg make any money
 ## My answers so far:
 
 ### 1. Pay it forward
-I have leveraged the experience of other web-citizens as documented in their blogs in my projects. I hope this blog helps a reader to achieve their projects. 
+
+For my projects, I have leveraged the experience of other web-citizens that they have documented in their blogs. I hope this blog helps a reader to achieve their projects. 
 
 ### 2. As a personal journal
-I could make these notes and not publish it. In fact I have been doing this for more than a year now, but the journal is messy, and the quality is ho-hum. Maybe if I publish it to the internet there will be a forever-record, somewhat influencing me to up my game. The journal started out to document work in progress so that I could keep reasonable productivity after large gaps between progress - raising three young children takes prioty over projects. And then there is helping my future-self fix what ever I have made when it eventually breaks. 
+
+I could make these notes and not publish them. In fact I have been doing this for more than a year now, but the journal is messy, and the quality is ho-hum. Maybe if I publish it to the internet there will be a forever-record, somewhat influencing me to up my game. My journal started out with a purpouse of documenting work in progress so that I could keep reasonable productivity after large gaps between progress - raising three young children takes prioty over projects. And then there is my desire to help my future-self fix what ever I have made when it eventually breaks. 
 
 ### 3. To make money?
 
-Well, wouldn't that would be nice. It's 2023, If I'm chasing advertising revenue I think the only way for this to happen now is through YouTube. I dont want ads on my site anyways. Both because it creates a mess and I don't want telemetry feeding big-tech.
+Well, wouldn't that be nice. It would be great to share this bounty with the developers of the tools I use. 
 
-IMHO the Australian tax system is very favourable towards small business. If this endeavour became a business at some point in the future it may help to have some historical financial records. So that's my task to today.
+However it's 2023, if I'm hoping for advertising revenue, I need to be on YouTube. I really don't want ads on my site. Both because it creates a mess and I don't want telemetry feeding my readers' data to big-tech.
+
+#### Am I running a business?
+
+Not presently. This is a hobby. IMHO the Australian tax system is very favourable towards small business. If this endeavour became a business at some point in the future it may help to have some historical financial records. I would also need to review the licencing for the tools that I use, as initaly I've started using them for non-commercial purpouses.To keep my upfront costs down I will use free software where I can. As soon as the money comes pouring in, I'll start purchasing the software licences. Some of this may need to be done retrospectivey. 
+
+## My tasks for today:
+
+1. Track my expenses
+2. Track my licences 
 
 ## Track my expenses using markdown
 
@@ -56,5 +67,9 @@ My understanding of the markdown parser:
 
 ### Done
 Here it is in all it's glory - [my IoT expense tracker]({% link expense-tracker.md %})
+
+## Track my software licences 
+
+Another page to create: [my software licence tracker]({% link licence-tracker.md %})
 
 See you later-ciao!
