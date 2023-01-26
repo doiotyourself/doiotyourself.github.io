@@ -4,7 +4,7 @@ title: My Software Licence Tracker
 permalink: /software-licence-tracker.html
 ---
 
-| Software | non-commercial use | Commercial use | Licence |
+| Item | non-commercial use | Commercial use | Licence |
 | --- | --- | --- |
 | Google Account | OK | OK | [Google Terms of Service](https://policies.google.com/terms?hl=en-US) |
 | GitHub Account | OK | OK | [GitHub Docs](https://docs.github.com/en/get-started/learning-about-github/githubs-products)|

@@ -13,7 +13,7 @@ For my projects, I have leveraged the experience of other web-citizens that they
 
 ### 2. As a personal journal
 
-I could make these notes and not publish them. In fact I have been doing this for more than a year now, but the journal is messy, and the quality is ho-hum. Maybe if I publish it to the internet there will be a forever-record, somewhat influencing me to up my game. My journal started out with a purpouse of documenting work in progress so that I could keep reasonable productivity after large gaps between progress - raising three young children takes prioty over projects. And then there is my desire to help my future-self fix what ever I have made when it eventually breaks. 
+I could make these notes and not publish them. In fact I have been doing this for more than a year now, but the journal is messy, and the quality is ho-hum. Maybe if I publish it to the Internet there will be a forever-record, somewhat influencing me to up my game. My journal started out with a purpose of documenting work in progress so that I could keep reasonable productivity after large gaps between progress - raising three young children takes priority over projects. And then there is my desire to help my future-self fix what ever I have made when it eventually breaks. 
 
 ### 3. To make money?
 
@@ -23,7 +23,7 @@ However it's 2023, if I'm hoping for advertising revenue, I need to be on YouTub
 
 #### Am I running a business?
 
-Not presently. This is a hobby. IMHO the Australian tax system is very favourable towards small business. If this endeavour became a business at some point in the future it may help to have some historical financial records. I would also need to review the licencing for the tools that I use, as initaly I've started using them for non-commercial purpouses.To keep my upfront costs down I will use free software where I can. As soon as the money comes pouring in, I'll start purchasing the software licences. Some of this may need to be done retrospectivey. 
+Not presently. This is a hobby. IMHO the Australian tax system is very favourable towards small business. If this endeavour became a business at some point in the future it may help to have some historical financial records. I would also need to review the licensing for the tools that I use, as initially I've started using them for non-commercial purposes.To keep my upfront costs down I will use free software where I can. As soon as the money comes pouring in, I'll start purchasing the software licences. Some of this may need to be done retrospectively. 
 
 ## My tasks for today:
 
@@ -38,7 +38,7 @@ A quick search and I found [some python that imports markdown into GNUCash](http
 
 ### I ♥ GNUCash.
 
-I have been using GNUCash for my personal finance since version 2.6 and I think it's great. My favorite feature is that you can save the ledgers in a somewhat human-radable text-based file. I then sync to a remote git repository for backup and sharing. Post idea?
+I have been using GNUCash for my personal finance since version 2.6 and I think it's great. My favourite feature is that you can save the ledgers in a somewhat human-readable text-based file. I then sync to a remote git repository for backup and sharing. Post idea?
 
 ### Back to the code. 
 

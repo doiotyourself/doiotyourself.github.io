@@ -16,7 +16,7 @@ Thank you gmail.
 
 ## Step Two - Create a GitHub account
 
-Thank you Github for [github.com/doiotyourself](https://github.com/doiotyourself/).
+Thank you GitHub for [github.com/doiotyourself](https://github.com/doiotyourself/).
 
 ## Step Three - Fork Jekyll Now
 
@@ -24,7 +24,7 @@ I'm following [this guide in Smashing Magazine](https://www.smashingmagazine.com
 
 ## Review progress
 
-Github wasn't publishing my page on github.io. I needed to make a commit on master to kick off the build. I was loggedin to GitHub so I made a minor change to `_config.yml` using the browser editor.
+GitHub wasn't publishing my page on github.io. I needed to make a commit on master to kick off the build. I was logged in to GitHub so I made a minor change to `_config.yml` using the browser editor.
 
 OK we're online at [GitHub pages](https://doiotyourself.github.io). 
 
@@ -35,7 +35,7 @@ OK we're online at [GitHub pages](https://doiotyourself.github.io).
 
 ## What is this? Cloudflare Pages. 
 
-Hmmm, looks very cool but I can host a static page with a [custom domain at GitHub pages](https://docs.github.com/en/pages/configuring-a-custom-domain-for-your-github-pages-site). Yeah-but, SSL works out of the box with Cloudflare pages and it is two-clicks simple to setup the DNS record for my domain. Cloudflare you won me over.
+Hmm, looks very cool but I can host a static page with a [custom domain at GitHub pages](https://docs.github.com/en/pages/configuring-a-custom-domain-for-your-github-pages-site). Yeah-but, SSL works out of the box with Cloudflare pages and it is two-clicks simple to set up the DNS record for my domain. Cloudflare you won me over.
 
 ## Step Five - Migrate jekyll from GitHub pages to Cloudflare pages
 
@@ -49,7 +49,7 @@ I'm on a fresh installation of [NeptuneOS](https://neptuneos.com/) so there were
 Easy, it's in Muon package manager.
 
 ### Install VSCodium
-VSCodium is the first software that I haven't found in the package manager. Nevermind, to install it is as easy as:
+VSCodium is the first software that I haven't found in the package manager. Never mind, to install it is as easy as:
 {% highlight terminal %}
 sudo apt install extrepo
 sudo extrepo enable vscodium
@@ -79,7 +79,7 @@ At this point I can sync local changes with master.
 
 Cloudflare pages is very user friendly.
 - create a project
-- link to GitHub repository. (Very easy when loggedin to GitHub account in the same browser.)
+- link to GitHub repository. (Very easy when logged in to GitHub account in the same browser.)
 - setup build 
 - deploy to [Cloudflare Pages](https://doiotyourself.pages.dev).
 
@@ -90,7 +90,7 @@ Final step for tonight is setup the DNS records for my new domain. This is very 
 
 Thanks for visiting [doiotyourself.com](https://doiotyourself.com).
 
-## Bonus Step - Set up email forwarding to gmail
+## Bonus Step - Set up email forwarding to Gmail
 
 I'll add DNS configuration to forward emails sent to <josh@doiotyourself.com> to the email account that I setup in Step One. [Start here](https://dash.cloudflare.com/?to=/:account/:zone/email/overview) - it's only 3 clicks to set up.
 

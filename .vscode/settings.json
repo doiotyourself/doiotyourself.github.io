@@ -1,0 +1,17 @@
+{
+    "pasteImage.basePath": "${currentFileDir}",
+    "pasteImage.namePrefix": "doiotyourself.com_${currentFileNameWithoutExt}_",
+    "pasteImage.path": "${projectRoot}/images",
+    "pasteImage.forceUnixStyleSeparator": true,
+    "pasteImage.prefix": "/",
+    "pasteImage.filePathConfirmInputBoxMode": "onlyName",
+    "pasteImage.showFilePathConfirmInputBox": true,
+    "spellright.language": [
+        "en_AU"
+    ],
+    "spellright.documentTypes": [
+        "markdown",
+        "latex",
+        "plaintext"
+    ]
+}
