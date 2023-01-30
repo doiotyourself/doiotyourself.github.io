@@ -8,6 +8,7 @@ A short post today to talk about a few VSCodium Extensions that increase my prod
 1. yzhang.markdown-all-in-one
 2. mushan.vscode-paste-image
 3. ban.spellright
+4. DavidAnson.vscode-markdownlint
 
 
 ## Markdown all in one 
@@ -47,3 +48,7 @@ ln -s /usr/share/hunspell/* ~/.config/VSCodium/Dictionaries
 {% endhighlight %}
 
 Codium command `SpellRight: Select Dictionary (Language)`
+
+## markdownlint
+
+markdownlint includes a library of rules to encourage standards and consistency for Markdown files.
