@@ -11,7 +11,7 @@ Here is how.
 
 ## First Step - Create an email address
 
-Thank you gmail.
+Thank you Gmail.
 
 ## Step Two - Create a GitHub account
 
@@ -51,20 +51,27 @@ Easy, it's in Muon package manager.
 ### Install VSCodium
 
 VSCodium is the first software that I haven't found in the package manager. Never mind, to install it is as easy as:
-{% highlight terminal %}
-sudo apt install extrepo
-sudo extrepo enable vscodium
-sudo apt update
-sudo apt install codium
-{% endhighlight %}
+
+``` console
+$ sudo apt install extrepo
+$ sudo extrepo enable vscodium
+$ sudo apt update
+$ sudo apt install codium
+```
 
 ### Configure Git
 
 This is a fresh install so I have to go through the basics:
-{% highlight terminal %}
-git config --global user.name "josh-sanders"
-git config --global user.email "josh@doiotyourself.com"
-{% endhighlight %}
+
+```console
+$ git config --global user.name "josh-sanders"
+$ git config --global user.email "josh@doiotyourself.com"
+```
+
+```console
+$ git config --global user.name "josh-sanders"
+$ git config --global user.email "josh@doiotyourself.com"
+```
 
 ### [Add new ssh key to my GitHub account](https://docs.github.com/en/authentication/connecting-to-github-with-ssh/adding-a-new-ssh-key-to-your-github-account)
 
@@ -72,7 +79,7 @@ git config --global user.email "josh@doiotyourself.com"
 
 In the the diyiotyourself GitHub account I invited [my personal GitHub account](https://github.com/josh-sanders/) to [collaborate on the repository](https://docs.github.com/en/account-and-profile/setting-up-and-managing-your-personal-account-on-github/managing-access-to-your-personal-repositories/inviting-collaborators-to-a-personal-repository).Then switch accounts and accept the invitation.
 
-### `git clone`
+### `$ git clone`
 
 At this point I can sync local changes with master.
 
@@ -86,7 +93,7 @@ Cloudflare pages is very user friendly.
 
 - create a project
 - link to GitHub repository. (Very easy when logged in to GitHub account in the same browser.)
-- setup build 
+- setup build
 - deploy to [Cloudflare Pages](https://doiotyourself.pages.dev).
 
 ## Step Seven - Set up custom domain to point to my site

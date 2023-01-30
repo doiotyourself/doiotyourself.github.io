@@ -8,7 +8,7 @@ title: Too Soon to Upgrade to ESXi 8.0
 - ESXi 8.0 was released
 - ESXi 6.7 End of General Support
 
-I'm running ESXi 6.7 U3 on my main server at home. What does this mean for me? VMware does not offer new hardware support, server/client/guest OS updates, *new security patches* or bug fixes  unless otherwise noted.
+I'm running ESXi 6.7 U3 on my main server at home. What does this mean for me? VMware does not offer new hardware support, server/client/guest OS updates, ==new security patches== or bug fixes  unless otherwise noted.
 
 ## Can I Upgrade to ESXi 8.0
 
@@ -39,7 +39,7 @@ VMware removing [nmlx4_en driver][Devices deprecated and unsupported in ESXi 8.0
 
 My Dell 6Gbps SAS HBA is probably a LSI SAS2008 under the hood and I have a spare HBA with the SAS2108 chip. When they both use the same firmware they can use the same ESXi driver. A quick repair should one fail.
 
-*Alas, these HBA can't even upgrade to ESXi 7.0.*
+==Alas, these HBA can't even upgrade to ESXi 7.0.==
 
 So another day I may splurge about $140 on a Dell H330 and get one step closer to 8.0 (and 7.0 which is the latest version this machine is going to run). But for now I'll remain with ESXi 6.7 U3.
 

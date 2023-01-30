@@ -13,7 +13,11 @@ For my projects, I have leveraged the experience of other web-citizens that they
 
 ### 2. As a personal journal
 
-I could make these notes and not publish them. In fact I have been doing this for more than a year now, but the journal is messy, and the quality is ho-hum. Maybe if I publish it to the Internet there will be a forever-record, somewhat influencing me to up my game. My journal started out with a purpose of documenting work in progress so that I could keep reasonable productivity after large gaps between progress - raising three young children takes priority over projects. And then there is my desire to help my future-self fix what ever I have made when it eventually breaks.
+I could make these notes and not publish them. In fact, I have been doing this for more than a year now, but the journal is messy, and the quality is ho-hum. Maybe if I publish it to the Internet there will be a forever-record, somewhat influencing me to up my game. 
+
+My journal started out with a purpose to document work in progress adequately enough that I could keep reasonable productivity after time away from the project - raising three young children takes priority over projects.
+
+And then there is my desire to help my future-self fix what ever I have made when it eventually breaks.
 
 ### 3. To make money?
 
@@ -23,7 +27,9 @@ However it's 2023, if I'm hoping for advertising revenue, I need to be on YouTub
 
 #### Am I running a business?
 
-Not presently. This is a hobby. IMHO the Australian tax system is very favourable towards small business. If this endeavour became a business at some point in the future it may help to have some historical financial records. I would also need to review the licensing for the tools that I use, as initially I've started using them for non-commercial purposes.To keep my upfront costs down I will use free software where I can. As soon as the money comes pouring in, I'll start purchasing the software licences. Some of this may need to be done retrospectively.
+Not presently. This is a hobby.
+
+If this endeavour became a business at some point in the future it may help to have some historical financial records. I would also need to review the licensing for the tools that I use, as initially I've started using them for non-commercial purposes. To keep my upfront costs down I will use free software where I can. As soon as the money comes pouring in, I'll start purchasing the software licences. Some of this may need to be done retrospectively.
 
 ## My tasks for today
 
@@ -48,7 +54,7 @@ I haven't forked it.
 
 But I'll start using the markdown format:
 
-{% highlight markdown %}
+```md
 # 2022-11-29
 
 $1.50 Ice cream
@@ -58,7 +64,7 @@ $4.80 Coffee
 
 $32 Groceries
 +$60 John paid back
-{% endhighlight %}
+```
 
 My understanding of the markdown parser:
 
