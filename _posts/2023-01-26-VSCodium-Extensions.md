@@ -47,7 +47,7 @@ Set it up to paste the images in the correct directory and prompt for file name 
 ```
 
 Test image:
-![Image by <a href="https://pixabay.com/users/geralt-9301/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=1927697">Gerd Altmann</a> from <a href="https://pixabay.com//?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=1927697">Pixabay</a>](/../images/doiotyourself.com_2023-01-26-VSCodium-Extensions_IoT-hand.png)
+![Image by <a href="https://pixabay.com/users/geralt-9301/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=1927697">Gerd Altmann</a> from <a href="https://pixabay.com//?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=1927697">Pixabay</a>](/../images/doiotyourself.com_2023-01-26-VSCodium-Extensions_IoT_hand.png)
 
 ## Spell Right
 
