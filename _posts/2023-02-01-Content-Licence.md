@@ -3,15 +3,15 @@ layout: post
 title: Content Licence
 ---
 
-Today I have chosen to release all of this content into the public domain. 
+Today I have chosen to dedicate all of the content I creeate for this blog to the public domain. 
 
-I wanted to add the creative commons CC0 logo to the footer.
+To let visitors know I want to add the creative commons CC0 logo to the footer of this jekyll website.
 
 ## Step 1: Source the logo in SVG format
 
 Here is is:
 
-![Creative Commons CC0](https://mirrors.creativecommons.org/presskit/icons/pd.svg "Creative Commons CC0")
+[![Creative Commons CC0](https://mirrors.creativecommons.org/presskit/icons/pd.svg "Creative Commons CC0")](https://creativecommons.org/about/downloads/)
 
 ## Step:2 Convert the SVG to Base64
 
@@ -41,3 +41,4 @@ Finally add the icon to the html by adding the following line to the bottom of `
 ```html
 {{ "{%" }} if site.footer-links.creativecommons {{ "{%" }}<a href="https://creativecommons.org/{{ site.footer-links.creativecommons }}"><i class="svg-icon creativecommons"></i></a>{{ "{%" }} endif {{ "{%" }}
 ```
+Thanks and good night.
