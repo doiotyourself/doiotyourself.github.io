@@ -15,7 +15,7 @@ Here is is:
 
 ## Step:2 Convert the SVG to Base64
 
-I used this great tool: [https://base64.guru/converter/encode/image/svg]
+I used this great tool: https://base64.guru/converter/encode/image/svg
 
 Select the output format: CSS Background Image
 
@@ -26,7 +26,7 @@ First, in `_config.yml` we will add `creativecommons` element to the `footer-lin
 ```yaml 
   creativecommons: publicdomain/zero/1.0/
 ```
-Teh n we add then icon.
+Then we add the icon.
 
 In `_sass/svg-icons.scss` we will use the parent selector to add `.creativecommons` suffix to `.svg-icon` outer selector:
 
@@ -38,7 +38,8 @@ In `_sass/svg-icons.scss` we will use the parent selector to add `.creativecommo
 
 Finally add the icon to the html by adding the following line to the bottom of `_includes/svg-icons.html`.  
 
+{% raw %}
 ```html
 {% if site.footer-links.creativecommons %}<a href="https://creativecommons.org/{{ site.footer-links.creativecommons }}"><i class="svg-icon creativecommons"></i></a>{% endif %}
 ```
-
+{% endraw %}
