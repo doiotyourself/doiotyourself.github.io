@@ -5,7 +5,7 @@ title: Content Licence
 
 Today I have chosen to release all of this content into the public domain. 
 
-I wanted to add tthe creative commons CC0 logo to the footer.
+I wanted to add the creative commons CC0 logo to the footer.
 
 ## Step 1: Source the logo in SVG format
 
@@ -38,8 +38,6 @@ In `_sass/svg-icons.scss` we will use the parent selector to add `.creativecommo
 
 Finally add the icon to the html by adding the following line to the bottom of `_includes/svg-icons.html`.  
 
-{% raw %}
 ```html
-{% if site.footer-links.creativecommons %}<a href="https://creativecommons.org/{{ site.footer-links.creativecommons }}"><i class="svg-icon creativecommons"></i></a>{% endif %}
+{{ "{%" }} if site.footer-links.creativecommons {{ "{%" }}<a href="https://creativecommons.org/{{ site.footer-links.creativecommons }}"><i class="svg-icon creativecommons"></i></a>{{ "{%" }} endif {{ "{%" }}
 ```
-{% endraw %}
