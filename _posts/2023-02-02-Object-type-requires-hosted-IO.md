@@ -35,36 +35,41 @@ The version I'm downloading is `haos_ova-9.5.vmdk.zip `
 2. Extract the VMDK and upload it to your ESXi datastore.
 3. Enable SSH on the host and navigate to the directory with the VMDK. 
 ```console
-cd /vmfs/volumes/1b0d5392-52f42ee8/tmp/
+cd /vmfs/volumes/1b0d5392-52f42ee8/
 ```
-4. Clone the virtualdisk
+4. Clone the virtualdisk to the permanent datastore
 ```console
-vmkfstools -i haos_generic-aarch64-9.5.vmdk haos-9.5-clone.vmdk
+mkdir haos-9.5
+vmkfstools -i tmp/haos_ova-9.5.vmdk haos-9.5/haos_ova-9.5.vmdk
 ```
 5.  Create the VM
-| Name | haos-9.5 | 
-| --- | --- | 
-| Datastore | datastore2 | 
-| Guest OS name | Other 4.x or later Linux (64-bit) | 
-| Compatibility | ESXi 6.7 U2 virtual machine |
-| vCPUs | 2 | 
-| Memory | 16 GB |
-| Network adapters | 1 | 
-| Network adapter 1 network | vm_vlan100 User | 
-| Network adapter 1 type | E1000e | 
-| IDE controller 0 | IDE 0 | 
-| IDE controller 1 | IDE 1 | 
-| Hard disk 1 |
-|   Capacity | 0GB | 
-|   Datastore | [datastore2] haos-9.5/ |
-|   Mode | Dependent |
-|   Provisioning | Thick provisioned, lazily zeroed | 
-|   Controller | IDE controller 0 : 0 | 
-| USB controller 1 | USB 2.0 | 
+| Hardware                  | Configuration                     |
+| ------------------------- | --------------------------------- |
+| Name                      | haos-9.5                          |
+| Datastore                 | datastore2                        |
+| Guest OS name             | Other 4.x or later Linux (64-bit) |
+| Compatibility             | ESXi 6.7 U2 virtual machine       |
+| vCPUs                     | 2                                 |
+| Memory                    | 16 GB                             |
+| Network adapters          | 1                                 |
+| Network adapter 1 network | vm_vlan100 User                   |
+| Network adapter 1 type    | E1000e                            |
+| IDE controller 0          | IDE 0                             |
+| IDE controller 1          | IDE 1                             |
+| Hard disk 1               |
+| Capacity                  | 0GB                               |
+| Datastore                 | [datastore2] haos-9.5/            |
+| Mode                      | Dependent                         |
+| Provisioning              | Thick provisioned, lazily zeroed  |
+| Controller                | IDE controller 0 : 0              |
+| USB controller 1          | USB 2.0                           |
+
 6. Disable UEFI secure boot.
 7. boot the VM
+
 ![](/../images/doiotyourself.com_2023-02-02-Object-type-requires-hosted-IO_preparing-home-assistant.png)
+
 8. Complete the setup process. 
 9. Create a backup within Home Assistant
-10. Take snapshot of the VM.
-11. **play**
+10.   Take snapshot of the VM.
+11.   **play**
