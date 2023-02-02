@@ -39,6 +39,6 @@ In `_sass/svg-icons.scss` we will use the parent selector to add `.creativecommo
 Finally add the icon to the html by adding the following line to the bottom of `_includes/svg-icons.html`.  
 
 ```html
-{{ "{% if site.footer-links.creativecommons %}<a href="https://creativecommons.org/{{ site.footer-links.creativecommons }}"><i class="svg-icon creativecommons"></i></a>{% endif %" }}
+{% raw %}{% if site.footer-links.creativecommons %}{% endraw %}<a href="https://creativecommons.org/{% raw %}{{ site.footer-links.creativecommons }}{% endraw %}><i class="svg-icon creativecommons"></i></a>{% raw %}{% endif %}{% endraw %}
 ```
 Thanks and good night.
