@@ -52,21 +52,21 @@ This post claims to fix it permanently: [Running Hass.IO & Hass OS on VMWare ESX
     
     | Hardware                  | Configuration                     |
     | ------------------------- | --------------------------------- |
-    | Name                      | haos-9.5                          |
-    | Datastore                 | datastore2                        |
+    | Name                      | `haos-9.5`                          |
+    | Datastore                 | `datastore2`                        |
     | Guest OS name             | Other 4.x or later Linux (64-bit) |
     | Compatibility             | ESXi 6.7 U2 virtual machine       |
     | vCPUs                     | 2                                 |
     | Memory                    | 16 GB                             |
     | Network adapters          | 1                                 |
-    | Network adapter 1 network | vm_vlan100 User                   |
+    | Network adapter 1 network | `vm_vlan100 User`                   |
     | Network adapter 1 type    | E1000e                            |
     | IDE controller 0          | IDE 0                             |
     | IDE controller 1          | IDE 1                             |
     | Hard disk 1               |
     | Capacity                  | 0GB                               |
-    | Datastore                 | [datastore2] haos-9.5/            |
-    | Mode                      | Dependent                         |
+    | Datastore                 | `[datastore2] haos-9.5/`          |
+    | Mode                      | `Dependent                        |
     | Provisioning              | Thick provisioned, lazily zeroed  |
     | Controller                | IDE controller 0 : 0              |
     | USB controller 1          | USB 2.0                           |
