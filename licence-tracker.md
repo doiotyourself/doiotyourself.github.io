@@ -17,6 +17,7 @@ permalink: /software-licence-tracker.html
 | Git                                            | OK                 | OK             | GPLv2                           |
 | [Import GnuCash transactions from Markdown.][] | OK                 | OK             | GPLv3                           |
 | ESXi | OK | Paid only | |
+ | Home Assistant | OK | | Apache 2.0 |
 
 [Google Terms of Service]: https://policies.google.com/terms?hl=en-US
 [GitHub Docs]: https://docs.github.com/en/get-started/learning-about-github/githubs-products
