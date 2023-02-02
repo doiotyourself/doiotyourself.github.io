@@ -38,14 +38,16 @@ This post claims to fix it permanently: [Running Hass.IO & Hass OS on VMWare ESX
 3. Enable SSH on the host and navigate to the directory with the VMDK. 
     
     ```console
-    cd /vmfs/volumes/1b0d5392-52f42ee8/
+    [josh@esxi:~] cd /vmfs/volumes/1b0d5392-52f42ee8
     ```
 
 4. Clone the virtualdisk to the permanent datastore
     
     ```console
-    mkdir haos-9.5
-    vmkfstools -i tmp/haos_ova-9.5.vmdk haos-9.5/haos_ova-9.5.vmdk
+    [josh@esxi:/vmfs/volumes/1b0d5392-52f42ee8] mkdir haos-9.5
+    [josh@esxi:/vmfs/volumes/1b0d5392-52f42ee8] vmkfstools -i tmp/haos_ova-9.5.vmdk haos-9.5/haos_ova-9.5.vmdk
+    Cloning disk 'tmp/haos_ova-9.5.vmdk'...
+    Clone: 100% done.
     ```
 
 5.  Create the VM
