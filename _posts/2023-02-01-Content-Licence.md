@@ -3,9 +3,9 @@ layout: post
 title: Content Licence
 ---
 
-Today I have chosen to dedicate all of the content I creeate for this blog to the public domain. 
+Today I have chosen to dedicate all of the content I create for this blog to the public domain. 
 
-To let visitors know I want to add the creative commons CC0 logo to the footer of this jekyll website.
+To let visitors know, I would like to add the creative commons CC0 logo to the footer of this jekyll website.
 
 ## Step 1: Source the logo in SVG format
 
@@ -39,6 +39,6 @@ In `_sass/svg-icons.scss` we will use the parent selector to add `.creativecommo
 Finally add the icon to the html by adding the following line to the bottom of `_includes/svg-icons.html`.  
 
 ```html
-{{ "{%" }} if site.footer-links.creativecommons {{ "{%" }}<a href="https://creativecommons.org/{{ site.footer-links.creativecommons }}"><i class="svg-icon creativecommons"></i></a>{{ "{%" }} endif {{ "{%" }}
+{{ "{% if site.footer-links.creativecommons %}<a href="https://creativecommons.org/{{ site.footer-links.creativecommons }}"><i class="svg-icon creativecommons"></i></a>{% endif %" }}
 ```
 Thanks and good night.
