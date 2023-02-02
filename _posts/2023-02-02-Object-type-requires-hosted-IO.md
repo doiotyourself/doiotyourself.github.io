@@ -11,16 +11,16 @@ The VMDK is version 6.2 and ESXi version 6.7.
 
 ### tklaassens workaround 
 
-I have been using [Tim's workound](https://tklaassens.wordpress.com/2019/05/13/object-type-requires-hosted-i-o/) for too long:
+I have been using [Tim's workaround](https://tklaassens.wordpress.com/2019/05/13/object-type-requires-hosted-i-o/) for too long:
 
 SSH into the ESX host.
 
-Run the following command:
+Run the following commands:
 
 ```console
-vmkfstools -x check /vmfs/volumes/1b0d5392-52f42ee8/hass/haos_ova-6.2.vmdk
+[josh@esxi:~] vmkfstools -x check /vmfs/volumes/1b0d5392-52f42ee8/hass/haos_ova-6.2.vmdk
 Disk needs repair.
-vmkfstools -x repair /vmfs/volumes/1b0d5392-52f42ee8/hass/haos_ova-6.2.vmdk
+[josh@esxi:~] vmkfstools -x repair /vmfs/volumes/1b0d5392-52f42ee8/hass/haos_ova-6.2.vmdk
 Disk was successfully repaired.
 ```
 
