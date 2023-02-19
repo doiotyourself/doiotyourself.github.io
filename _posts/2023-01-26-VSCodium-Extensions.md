@@ -10,7 +10,7 @@ A short post today to talk about a few VSCodium Extensions that increase my prod
 3. ban.spellright
 4. DavidAnson.vscode-markdownlint
 
-## Markdown all in one
+## Markdown All in One
 
 All you need for Markdown (keyboard shortcuts, table of contents, auto preview and more).
 

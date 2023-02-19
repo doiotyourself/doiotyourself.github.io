@@ -12,14 +12,13 @@ I'm running ESXi 6.7 U3 on my main server at home. What does this mean for me? V
 
 ## Can I Upgrade to ESXi 8.0
 
-So let's check the [VMware Hardware Compatibility List (HCL)](https://www.vmware.com/resources/compatibility/) for my hardware to see if I can upgrade to the latest and greatest.
+So let's check the [VMware Hardware Compatibility List (HCL)][] for my hardware to see if I can upgrade to the latest and greatest.
 
-| Hardware                         | Supported in ESXi 8.0 |
-| -------------------------------- | --------------------- |
-| Super Micro X9DR3 Mainboard      | No                    |
-| Intel Xeon E5-2600-v2 Series CPU | No                    |
-| Mellanox ConnectX-3 10GbE        | No                    |
-| Dell 6Gbps SAS HBA               | No                    |
+| Hardware                                         | Supported in ESXi 8.0 |
+| ------------------------------------------------ | --------------------- |
+| Super Micro X9DR3 Mainboard (Intel Chipset C602) | No                    |
+| Intel Xeon E5-2600-v2 Series CPU                 | No                    |
+| Mellanox ConnectX-3 10GbE                        | No                    |
 
 Oh, that's not a good start.
 
@@ -29,18 +28,17 @@ Oh, that's not a good start.
 
 ### Intel Xeon E5-2600-v2 Series CPU
 
-Intel Xeon E5 2600 v2 Series is based on IvyBridge architecture and were released in 2013/2014. These CPUs are not supported in 8.0 - [there are workarounds](https://williamlam.com/2022/09/homelab-considerations-for-vsphere-8.html) - but I'm not interested. For me, this server is critical for my infrastructure.
+Intel Xeon E5 2600 v2 Series is based on IvyBridge architecture and were released in 2013/2014. These CPUs are not supported in 8.0 - [there are workarounds][] - but I'm not interested. For me, this server is critical for my infrastructure.
 
 ### Mellanox ConnectX-3 10GbE
 
-VMware removing [nmlx4_en driver][Devices deprecated and unsupported in ESXi 8.0 (88172)] in ESXi 8.0 outraged [r/homelab](https://www.reddit.com/r/homelab/).
+VMware removing nmlx4_en driver from ESXi 8.0 outraged [r/homelab][].
 
-### Dell 6Gbps SAS HBA
+## So, Let's Upgrade to ESXi 7.0.3
 
-My Dell 6Gbps SAS HBA is probably a LSI SAS2008 under the hood and I have a spare HBA with the SAS2108 chip. When they both use the same firmware they can use the same ESXi driver. A quick repair should one fail.
+More to come
 
-**Alas, these HBA can't even upgrade to ESXi 7.0.**
-
-So another day I may splurge about $140 on a Dell H330 and get one step closer to 8.0 (and 7.0 which is the latest version this machine is going to run). But for now I'll remain with ESXi 6.7 U3.
-
+[VMware Hardware Compatibility List (HCL)]: https://www.vmware.com/resources/compatibility/
 [Devices deprecated and unsupported in ESXi 8.0 (88172)]: https://kb.vmware.com/s/article/88172
+[there are workarounds]: https://williamlam.com/2022/09/homelab-considerations-for-vsphere-8.html
+[r/homelab]: https://www.reddit.com/r/homelab/
