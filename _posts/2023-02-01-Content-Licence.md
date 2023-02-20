@@ -41,4 +41,5 @@ Finally add the icon to the html by adding the following line to the bottom of `
 ```html
 {% raw %}{% if site.footer-links.creativecommons %}{% endraw %}<a href="https://creativecommons.org/{% raw %}{{ site.footer-links.creativecommons }}{% endraw %}><i class="svg-icon creativecommons"></i></a>{% raw %}{% endif %}{% endraw %}
 ```
+
 Thanks and good night.

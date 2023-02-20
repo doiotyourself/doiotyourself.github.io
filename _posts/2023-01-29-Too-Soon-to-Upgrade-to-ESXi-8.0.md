@@ -3,12 +3,12 @@ layout: post
 title: Too Soon to Upgrade to ESXi 8.0
 ---
 
-## There were a couple of big milestones for ESXi in October 2022
+There were a couple of big milestones for ESXi in October 2022, which prompted me to review my current ESXi 6.7U3 installation:
 
 - ESXi 8.0 was released
 - ESXi 6.7 End of General Support
 
-I'm running ESXi 6.7 U3 on my main server at home. What does this mean for me? VMware does not offer new hardware support, server/client/guest OS updates, **new security patches** or bug fixes  unless otherwise noted.
+What does this mean for ESXi 6.7 U3? VMware does not offer new hardware support, server/client/guest OS updates, **new security patches** or bug fixes  unless otherwise noted.
 
 ## Can I Upgrade to ESXi 8.0
 
@@ -20,7 +20,7 @@ So let's check the [VMware Hardware Compatibility List (HCL)][] for my hardware 
 | Intel Xeon E5-2600-v2 Series CPU                 | No                    |
 | Mellanox ConnectX-3 10GbE                        | No                    |
 
-Oh, that's not a good start.
+Oh, that's not a good start. A deeper dive...
 
 ### Super Micro X9DR3 Mainboard
 
@@ -34,11 +34,21 @@ Intel Xeon E5 2600 v2 Series is based on IvyBridge architecture and were release
 
 VMware removing nmlx4_en driver from ESXi 8.0 outraged [r/homelab][].
 
-## So, Let's Upgrade to ESXi 7.0.3
+## So, Let's Upgrade to the Next Newest Version ESXi 7.0.3
 
-More to come
+My hardware, listed in the table above, will work fine.
+
+My host bus adapters (HBA), LSI SAS2008 and SAS2108, are not supported by ESXi 7.0 but work fine in pass-through mode. This is my typical configuration, one HBA passed through to OmniOS and the other a cold spare ready for quick repair should one fail.
+
+### ESXi Installation Media and Licence
+
+You can get ESXi for free right here: [https://customerconnect.vmware.com/en/evalcenter?p=free-esxi7][]. Create or log in to your account and download the ISO.
+
+I had a lot of trouble creating a bootable USB drive containing the ISO. In the end, I had success with [rufus-2.18][] on an old Windows VM. My guess is it's something to do with getting the right version of syslinux.
 
 [VMware Hardware Compatibility List (HCL)]: https://www.vmware.com/resources/compatibility/
 [Devices deprecated and unsupported in ESXi 8.0 (88172)]: https://kb.vmware.com/s/article/88172
 [there are workarounds]: https://williamlam.com/2022/09/homelab-considerations-for-vsphere-8.html
 [r/homelab]: https://www.reddit.com/r/homelab/
+[https://customerconnect.vmware.com/en/evalcenter?p=free-esxi7]: https://customerconnect.vmware.com/en/evalcenter?p=free-esxi7
+[rufus-2.18]: https://rufus.ie/downloads/

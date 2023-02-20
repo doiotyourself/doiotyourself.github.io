@@ -28,7 +28,7 @@ Set it to the default markdown formatter my user. (Config saved in `~/.config/VS
 
 Paste image directly from clipboard to markdown.
 
-Needs xclip which can be installed through Muon package manager
+Needs xclip which can be installed through Muon package manager.
 
 *Keyboard shortcut `Ctrl+Alt+v`*
 
@@ -58,8 +58,9 @@ Link Spell Right to my system dictionaries.
 ```console
 $ ln -s /usr/share/hunspell/* ~/.config/VSCodium/Dictionaries
 ```
+Select dictionary with Codium command `SpellRight: Select Dictionary (Language)`
 
-Codium command `SpellRight: Select Dictionary (Language)`
+Also, create a keybinding for `SpellRight: Add Selection to User Dictionary`
 
 ## markdownlint
 
