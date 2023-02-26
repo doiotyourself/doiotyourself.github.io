@@ -30,55 +30,95 @@ This post claims to fix it permanently: [Running Hass.IO & Hass OS on VMWare ESX
 
 ## Let's go
 
+I have recently upgraded ESXi from 6.7 to 7.0 so let's reinstall haos. 
+
 1. Download the latest version of haos from [https://github.com/home-assistant/operating-system/releases](https://github.com/home-assistant/operating-system/releases). 
-    
+
     The version I'm downloading is `haos_ova-9.5.vmdk.zip `
 
-2. Extract the VMDK and upload it to your ESXi datastore.
-3. Enable SSH on the host and navigate to the directory with the VMDK. 
-    
+2. Extract the VMDK and upload it to your ESXi datastore (e.g. datastore3).
+
+3. Enable SSH on the host and locate the VMDK.
+
     ```console
-    [josh@esxi:~] cd /vmfs/volumes/1b0d5392-52f42ee8
+    [josh@esxi:~] cd /vmfs/volumes/
+    [josh@esxi:/vmfs/volumes] ls
+    datastore3    vmrun
+    [josh@esxi:/vmfs/volumes] ls ./datastore3
+    haos_ova-9.5.vmdk
     ```
 
-4. Clone the virtualdisk to the permanent datastore
-    
+4. Clone the virtualdisk to the permanent datastore (e.g. from datastore3 to vmrun)
+
     ```console
-    [josh@esxi:/vmfs/volumes/1b0d5392-52f42ee8] mkdir haos-9.5
-    [josh@esxi:/vmfs/volumes/1b0d5392-52f42ee8] vmkfstools -i tmp/haos_ova-9.5.vmdk haos-9.5/haos_ova-9.5.vmdk
-    Cloning disk 'tmp/haos_ova-9.5.vmdk'...
+    [josh@esxi:/vmfs/volumes] mkdir ./vmrun/haos9
+    [josh@esxi:/vmfs/volumes] vmkfstools -i ./datastore3/haos_ova-9.5.vmdk ./vmrun/haos9/haos.vmdk
+    Destination disk format: Thin
+    Cloning disk '.datastore3/haos_ova-9.5.vmdk'...
     Clone: 100% done.
     ```
 
-5.  Create the VM
-    
+5. Create a new virtual machine
+
+6. Select a name and guest OS
+
+    - Name: haos9.5
+    - Compatibility: ESXi 7.0 U2 virtual machine
+    - Guest OS family: Linux
+    - Guest OS version: Other 5.x or later Linux (64-bit)
+
+7. Select storage
+
+    Datastore: vmrun
+
+8. Customise settings
+
+    **Virtual Hardware**
+    - CPU: 4
+    - Cores per Socket: 2
+    - Memory: 16 GB
+    - Hard disk 1: remove
+    - Add hard disk -> Existing Hard Disk: `vmrun/haos9/haos.vmdk`
+    - Network Adapter 1: `107 IoT`
+    - Adaptor Type :E1000e
+    - CD/DVD Drive 1: remove
+    - SATA Controller: remove
+
+    **VM Options**
+    - Boot Options -> Enable UEFI secure boot: uncheck
+
+    **Table 1: Sumary of Virtual Machine**
     | Hardware                  | Configuration                     |
     | ------------------------- | --------------------------------- |
-    | Name                      | `haos-9.5`                          |
-    | Datastore                 | `datastore2`                        |
-    | Guest OS name             | Other 4.x or later Linux (64-bit) |
-    | Compatibility             | ESXi 6.7 U2 virtual machine       |
-    | vCPUs                     | 2                                 |
+    | Name                      | `haos9`                           |
+    | Datastore                 | `vmrun`                           |
+    | Guest OS name             | Other 5.x or later Linux (64-bit) |
+    | Compatibility             | ESXi 7.0 U2 virtual machine       |
+    | vCPUs                     | 4                                 |
     | Memory                    | 16 GB                             |
     | Network adapters          | 1                                 |
-    | Network adapter 1 network | `vm_vlan100 User`                   |
+    | Network adapter 1 network | `107 IoT`                         |
     | Network adapter 1 type    | E1000e                            |
     | IDE controller 0          | IDE 0                             |
     | IDE controller 1          | IDE 1                             |
+    | SCSI controller 0         | VMware Paravirtual                |
     | Hard disk 1               |
-    | Capacity                  | 0GB                               |
-    | Datastore                 | `[datastore2] haos-9.5/`          |
-    | Mode                      | `Dependent                        |
-    | Provisioning              | Thick provisioned, lazily zeroed  |
-    | Controller                | IDE controller 0 : 0              |
+    | -    Capacity             | 1GB                               |
+    | -    Datastore            | `[vmrun] haos9/`                  |
+    | -    Mode                 | Dependent                         |
+    | -    Provisioning         | Thick provisioned, lazily zeroed  |
+    | -    Controller           | SCSI controller 0 : 0             |
     | USB controller 1          | USB 2.0                           |
-    
-6. Disable UEFI secure boot.
-7. boot the VM
-    
+
+9.  Boot the VM
+
     ![](/../images/doiotyourself.com_2023-02-02-Object-type-requires-hosted-IO_preparing-home-assistant.png)
-    
-8. Complete the setup process. 
-9. Create a backup within Home Assistant
-10.   Take snapshot of the VM.
-11.   **play**
+
+10. Complete the setup process
+
+11. Create a backup within Home Assistant
+    Settings -> System -> Backup: Create Backup
+
+12. Take snapshot of the VM
+
+13. **play**

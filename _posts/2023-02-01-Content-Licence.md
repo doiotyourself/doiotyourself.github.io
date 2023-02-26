@@ -3,7 +3,7 @@ layout: post
 title: Content Licence
 ---
 
-Today I have chosen to dedicate all of the content I create for this blog to the public domain. 
+Today I have chosen to dedicate all of the content I create for this blog to the public domain.
 
 To let visitors know, I would like to add the creative commons CC0 logo to the footer of this jekyll website.
 
@@ -15,7 +15,7 @@ Here is is:
 
 ## Step:2 Convert the SVG to Base64
 
-I used this great tool: https://base64.guru/converter/encode/image/svg
+I used this great tool: [https://base64.guru/converter/encode/image/svg](https://base64.guru/converter/encode/image/svg)
 
 Select the output format: CSS Background Image
 
@@ -23,9 +23,10 @@ Select the output format: CSS Background Image
 
 First, in `_config.yml` we will add `creativecommons` element to the `footer-links` dictionary:
 
-```yaml 
+```yaml
   creativecommons: publicdomain/zero/1.0/
 ```
+
 Then we add the icon.
 
 In `_sass/svg-icons.scss` we will use the parent selector to add `.creativecommons` suffix to `.svg-icon` outer selector:

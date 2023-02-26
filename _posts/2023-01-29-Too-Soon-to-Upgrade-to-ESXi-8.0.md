@@ -46,6 +46,18 @@ You can get ESXi for free right here: [https://customerconnect.vmware.com/en/eva
 
 I had a lot of trouble creating a bootable USB drive containing the ISO. In the end, I had success with [rufus-2.18][] on an old Windows VM. My guess is it's something to do with getting the right version of syslinux.
 
+### Create User
+
+Log on to an ESXi host -> Manage -> Security & users -> Users -> Add user -> complete "Add a user"
+
+When completed:
+
+Host -> Actions -> Permissions -> Add user -> enter newly created user name -> select Administrator from the right drop down menu -> optional: propagate to all children
+
+Check that you can access via SSH with newly created user.
+
+Host -> Actions -> Services -> Enable Secure Shell (SSH)
+
 [VMware Hardware Compatibility List (HCL)]: https://www.vmware.com/resources/compatibility/
 [Devices deprecated and unsupported in ESXi 8.0 (88172)]: https://kb.vmware.com/s/article/88172
 [there are workarounds]: https://williamlam.com/2022/09/homelab-considerations-for-vsphere-8.html
