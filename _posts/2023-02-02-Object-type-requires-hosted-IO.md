@@ -62,14 +62,14 @@ I have recently upgraded ESXi from 6.7 to 7.0 so let's reinstall haos.
 
 6. Select a name and guest OS
 
-    - Name: haos9.5
+    - Name: `haos9`
     - Compatibility: ESXi 7.0 U2 virtual machine
     - Guest OS family: Linux
     - Guest OS version: Other 5.x or later Linux (64-bit)
 
 7. Select storage
 
-    Datastore: vmrun
+    Datastore: `vmrun`
 
 8. Customise settings
 
@@ -77,15 +77,15 @@ I have recently upgraded ESXi from 6.7 to 7.0 so let's reinstall haos.
     - CPU: 4
     - Cores per Socket: 2
     - Memory: 16 GB
-    - Hard disk 1: remove
+    - Hard disk 1: _remove_
     - Add hard disk -> Existing Hard Disk: `vmrun/haos9/haos.vmdk`
     - Network Adapter 1: `107 IoT`
     - Adaptor Type :E1000e
-    - CD/DVD Drive 1: remove
-    - SATA Controller: remove
+    - CD/DVD Drive 1: _remove_
+    - SATA Controller: _remove_
 
     **VM Options**
-    - Boot Options -> Enable UEFI secure boot: uncheck
+    - Boot Options -> Enable UEFI secure boot: _uncheck_
 
     **Table 1: Sumary of Virtual Machine**
     | Hardware                  | Configuration                     |
@@ -117,7 +117,7 @@ I have recently upgraded ESXi from 6.7 to 7.0 so let's reinstall haos.
 10. Complete the setup process
 
 11. Create a backup within Home Assistant
-    Settings -> System -> Backup: Create Backup
+    Settings -> System -> Backup: _Create Backup_
 
 12. Take snapshot of the VM
 
