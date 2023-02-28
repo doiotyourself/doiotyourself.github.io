@@ -137,3 +137,5 @@ Developer Tools -> _RESTART_
 
 Restart Home Assistant? _RESTART_
 
+Local Tuya integration with devices is unpredictable. **Keep trying!** Restart the device, Restart the Tuya Local integration. **Keep trying!**
+
