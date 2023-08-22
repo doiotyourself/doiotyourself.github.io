@@ -34,7 +34,7 @@ I have recently upgraded ESXi from 6.7 to 7.0 so let's reinstall haos.
 
 1. Download the latest version of haos from [https://github.com/home-assistant/operating-system/releases](https://github.com/home-assistant/operating-system/releases). 
 
-    The version I'm downloading is `haos_ova-9.5.vmdk.zip `
+    The version I'm downloading is `haos_ova-10.0.vmdk.zip `
 
 2. Extract the VMDK and upload it to your ESXi datastore (e.g. datastore3).
 
@@ -45,16 +45,16 @@ I have recently upgraded ESXi from 6.7 to 7.0 so let's reinstall haos.
     [josh@esxi:/vmfs/volumes] ls
     datastore3    vmrun
     [josh@esxi:/vmfs/volumes] ls ./datastore3
-    haos_ova-9.5.vmdk
+    haos_ova-10.0.vmdk
     ```
 
 4. Clone the virtualdisk to the permanent datastore (e.g. from datastore3 to vmrun)
 
     ```console
-    [josh@esxi:/vmfs/volumes] mkdir ./vmrun/haos9
-    [josh@esxi:/vmfs/volumes] vmkfstools -i ./datastore3/haos_ova-9.5.vmdk ./vmrun/haos9/haos.vmdk
+    [josh@esxi:/vmfs/volumes] mkdir ./vmrun/haos-10
+    [josh@esxi:/vmfs/volumes] vmkfstools -i ./datastore3/haos_ova-10.0.vmdk ./vmrun/haos-10/haos.vmdk
     Destination disk format: Thin
-    Cloning disk '.datastore3/haos_ova-9.5.vmdk'...
+    Cloning disk '.datastore3/haos_ova-10.0.vmdk'...
     Clone: 100% done.
     ```
 
@@ -62,7 +62,7 @@ I have recently upgraded ESXi from 6.7 to 7.0 so let's reinstall haos.
 
 6. Select a name and guest OS
 
-    - Name: `haos9`
+    - Name: `haos-10`
     - Compatibility: ESXi 7.0 U2 virtual machine
     - Guest OS family: Linux
     - Guest OS version: Other 5.x or later Linux (64-bit)
@@ -78,7 +78,7 @@ I have recently upgraded ESXi from 6.7 to 7.0 so let's reinstall haos.
     - Cores per Socket: 2
     - Memory: 16 GB
     - Hard disk 1: _remove_
-    - Add hard disk -> Existing Hard Disk: `vmrun/haos9/haos.vmdk`
+    - Add hard disk -> Existing Hard Disk: `vmrun/haos-10/haos.vmdk`
     - Network Adapter 1: `107 IoT`
     - Adaptor Type :E1000e
     - CD/DVD Drive 1: _remove_
@@ -90,21 +90,21 @@ I have recently upgraded ESXi from 6.7 to 7.0 so let's reinstall haos.
     **Table 1: Sumary of Virtual Machine**
     | Hardware                  | Configuration                     |
     | ------------------------- | --------------------------------- |
-    | Name                      | `haos9`                           |
+    | Name                      | `haos-10`                           |
     | Datastore                 | `vmrun`                           |
     | Guest OS name             | Other 5.x or later Linux (64-bit) |
     | Compatibility             | ESXi 7.0 U2 virtual machine       |
     | vCPUs                     | 4                                 |
     | Memory                    | 16 GB                             |
     | Network adapters          | 1                                 |
-    | Network adapter 1 network | `107 IoT`                         |
+    | Network adapter 1 network | `107 LOL-CATS`                         |
     | Network adapter 1 type    | E1000e                            |
     | IDE controller 0          | IDE 0                             |
     | IDE controller 1          | IDE 1                             |
     | SCSI controller 0         | VMware Paravirtual                |
     | Hard disk 1               |
     | -    Capacity             | 1GB                               |
-    | -    Datastore            | `[vmrun] haos9/`                  |
+    | -    Datastore            | `[vmrun] haos-10/`                  |
     | -    Mode                 | Dependent                         |
     | -    Provisioning         | Thick provisioned, lazily zeroed  |
     | -    Controller           | SCSI controller 0 : 0             |
