@@ -102,10 +102,23 @@ The basic gist is:
     root@debian:~# systemctl restart ssh
     ```
 
-4. Install curl on Debian Server
+4. Install sudo
+    
+    ```console
+    # su -
+    Password: 
+    # apt install sudo
+    # usermod -aG sudo josh
+    # getent group sudo
+    sudo:x:27:josh
+    # logout
+    ~ logout 
+   ```
+
+5. Install curl on Debian Server
 
     ```console
     root@debian:~# apt install curl
     ```
 
-5. Connect to Debian Server FTW
+6. Connect to Debian Server FTW
